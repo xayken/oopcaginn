@@ -1,0 +1,74 @@
+Class Visitor
+-----------------------------
+- id: Integer
+- name : String
+- company : String
+- dateOfVisit : Date
+- timeOfVisit : Time
+- entryCard : EntryCard
+
++ checkIn(c: String, d: Date, t: Time)
++ checkOut(entryCard: EntryCard, d: Date, t: Time)
+
+
+Class EntryCard
+-----------------------------
++ id : Integer
++ dateOfIssue : Date
++ dateOfReturn : Date
+
++ setDateOfReturn(d: Date)
+
+Class Building
+-----------------------------
+- visitors : List of Visitors
+
++ registerVisitor(v: Visitor)
++ removeVisitor(v: Visitor)
++ viewVisitors() : List of Visitors
++ generateVisitorReport(startDate: Date, endDate: Date) : VisitorReport
++ generateCompanyReport(startDate: Date, endDate: Date) : CompanyReport
+
+
+Class VisitorReport
+-----------------------------
+- visitors : List of Visitors
+
++ filterByDate(startDate: Date, endDate: Date) : List of Visitors
++ sortByName() : List of Visitors
++ sortByCompany() : List of Visitors
++ sortByDate() : List of Visitors
+
+
+Class CompanyReport
+-----------------------------
+- companyVisits : Map (Company Name : Integer)
+
++ filterByDate(startDate: Date, endDate: Date) : Map (Company Name : Integer)
++ sortByVisits() : Map (Company Name : Integer)
+
+Class BusinessCenter
+-----------------------------
+- buildings : List of Buildings
+
++ addBuilding(b: Building)
++ removeBuilding(b: Building)
++ viewBuildings() : List of Buildings
+
+Class Company
+-----------------------------
+- name : String
+- employees : List of Employee
+
++ addEmployee(e: Employee)
++ removeEmployee(e: Employee)
++ viewEmployees() : List of Employee
+
+
+Class Employee
+-----------------------------
+- id : Integer
+- name : String
+-company : Company
+
++ setCompany(c: Company)

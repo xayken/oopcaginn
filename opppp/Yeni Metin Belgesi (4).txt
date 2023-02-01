@@ -1,0 +1,91 @@
+Class Company
+-----------------------------
+- Name : String
+- Address : String
+- Phone Number : String
+- Email : String
+- Business Centers : List of Business Centers
+
+Operations:
+- Add Business Center
+- Remove Business Center
+- View Business Centers
+
+
+Class Business Center
+-----------------------------
+- Name : String
+- Address : String
+- Phone Number : String
+- Email : String
+- Employees : List of Employees
+- Customers : List of Customers
+- Orders : List of Orders
+
+Operations:
+- Add Employee
+- Remove Employee
+- Add Customer
+- Remove Customer
+- View Employees
+- View Customers
+- View Orders
+
+
+Class Customer
+-----------------------------
+- Name : String
+- Address : String
+- Phone Number : String
+- Email : String
+- Order History : List of Orders
+
+Operations:
+- Place Order
+- View Order History
+- Update Contact Information
+
+
+
+Class Order
+-----------------------------
+- Order ID : Integer
+- Customer Name : String
+- Order Date : Date
+- Order Total : Float
+- Payment Status : Enum (Paid, Unpaid)
+
+Operations:
+- Process Payment
+- Update Order Status
+- Generate Invoice
+
+
+Class Product
+-----------------------------
+- Product ID : Integer
+- Product Name : String
+- Description : String
+- Price : Float
+- Stock Level : Integer
+
+Operations:
+- Update Stock Level
+- Add New Product
+- Remove Product
+
+
+
+
+Class Employee
+-----------------------------
+- Name : String
+- Address : String
+- Phone Number : String
+- Email : String
+- Role : Enum (Manager, Employee)
+
+Operations:
+- Process Order
+- Update Customer Information
+- Manage Inventory
